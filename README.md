@@ -2,7 +2,7 @@
 * 반응형 웹페이지를 위한 미디어쿼리 스터디 레파지토리입니다.
 * @media 브라우저 지원
 
-```script
+```
 ie9+, chrome 21+, firefox3.5+, safari4.0+, opera 9+
 ```
 
@@ -38,7 +38,7 @@ and | not | only | ,
 * **only 연산자** : 미디어 쿼리를 지원하지 않는 브라우저가 주어진 스타일을 적용하는 것을 방지
 ( not이나 only를 사용하려면 미디어 타입을 규정해야함 / 미디어 쿼리는 대소문자 구별x)
 
-```script
+```style
 @media (min-width: 700px) {background-color: yellow;}
 ```
 
