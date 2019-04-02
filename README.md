@@ -233,7 +233,7 @@ all | print | speech | screen
 
 ```
 Fluid Grids : 유동적인 그리드
-Fluid Images : 유동적인 
+Fluid Images : 유동적인 이미지
 ```
 ### 1) 그리드란?
 * 웹페이지를 수직 수평선으로 분할하는 레이아웃 요소
