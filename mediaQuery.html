@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+
+<body>
+    <ul class="nav-bar">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Guest</a>
+        </li>
+        <li>
+            <a href="#">Notice</a>
+        </li>
+    </ul>
+    
+    <div class="sidebar-right">
+        오른쪽 사이드바
+    </div>
+    <div class="content">
+            본문
+        </div>
+    <div class="footer">
+        footer
+    </div>
+</body>
+
+<script>
+
+</script>
+
+<style>
+    /* 메뉴, 사이드바, 푸터 배경색 설정 */
+    .nav-bar, .footer, .sidebar-right {
+        background-color:burlywood;
+    }
+    /* 목록 여백 초기화, 하단과 여백 조절 */
+    .nav-bar {
+        margin: 0 0 10px 0;
+        padding: 0px;
+    }
+    /* 메뉴를 일렬로 늘어놓기 */
+    .nav-bar li {
+        display: inline;
+    }
+    /* 사이드바를 오른쪽으로 float시킴. 너비 200px 최소높이 400px */
+    .sidebar-right {
+        min-height: 400px;
+        width: 200px;
+        float: right;
+    }
+    /* 최소높이 400px로 지정, 배경색 지정 */
+    .content {
+        min-height: 400px;
+        background: #E4F7BA;
+    }
+    /* 상단과의 여백 조절 */
+    .footer {
+        margin-top: 10px;
+    }
+
+    @media screen and (max-width:480px) {
+        .content {
+            width: auto;
+            min-height: 200px;
+        }
+        .sidebar-right {
+            width: auto;
+            float: none;
+            min-height: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+</style>
