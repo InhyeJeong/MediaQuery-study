@@ -239,6 +239,7 @@ Fluid Images : 유동적인 이미지
 * 웹페이지를 수직 수평선으로 분할하는 레이아웃 요소
 * https://getbootstrap.com/docs/4.0/layout/grid/
 * 한국어 : http://bootstrapk.com/css/
+* 그리드 예제 : http://bootstrapk.com/examples/grid/
 
 <p align="center">
 <img src="./images/bootstrap.png" width="800" >	
