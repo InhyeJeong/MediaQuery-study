@@ -40,11 +40,137 @@ and | not | only | ,
 ```html
 @media (min-width: 700px) {background-color: yellow;}
 ```
+
 * 위 구문에서 미디어 타입 생략되어 있지만, 미디어 타입의 기본값은 **all = @media all and(min-width: 700px) {...}**
 #### ① and 연산자의 사용
 
-* 새로운 미디어 특징들을 추가할 때마다 and 연산자 사용 : 모든 유형의 장치이며 최소너비 700px, 세로방향 모드일 때만 적용한다는 뜻
+* 새로운 미디어 특징들을 **추가**할 때마다 and 연산자 사용
+* 모든 유형의 장치이며 최소너비 700px, 세로방향 모드일 때만 적용한다는 뜻
 
 ```html
 @media (min-width: 700px) and (orientation:portrait) {...}
 ```
+
+* 프린트장치이며 최소너비 700px, 방향이 가로일 때 적용
+
+```html
+@media print and (min-width: 700px) and (orientation: landscape) {...}
+```
+
+#### ② 쉼표 연산자의 사용
+
+* 쉼표는 각각 **개별** 미디어 퀴리로 인식
+* 모든 장치에서 최소너비 700px이상일 때 적용하거나, 프린트 장치에서는 가로 방향일 때만 적용하겠다는 뜻
+
+```html
+@media (min-width: 700px), print and (orientation: landscape) {...}
+```
+
+#### ③ not 연산자의 사용
+
+* not은 **전체 미디어쿼리를 수식**함. 즉 not은 all and (color)를 포함하여 부정
+* @media not **(all and(color))** {...}와 같은 말. 모든 색상 장치에서 이 스타일을 적용하지 않겠다는 뜻. 쉼표로 분리하여 사용할 때, 미디어 구문은 개별 미디어 쿼리로 인식하므로 not은 쉼표 이후에 영향 미치지지 않음
+
+```html
+@media not all and (color) {...}
+```
+
+* 모든 스크린 색상 장치에서 적용하지 않거나, 프린트 색상 장치에서 적용하겠다는 뜻
+
+```html
+@media not screen and (color), print and (color)
+```
+
+#### ④ only 연산자의 사용
+
+* 오직 스크린에 색상 장치일 때만 이 스타일을 적용하겠다는 뜻.
+
+```html
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
+```
+
+### 2) media type(미디어 종류)
+
+```html
+all | print | speech | screen
+```
+* **all** : 기본값. 모든 미디어 장치에 사용됨
+* **print** : 프린터에 적용
+* **screen** : 컴퓨터 스크린, 테블릿, 스마트폰 등..
+* **speech** : 페이지를 읽어주는 화면 낭독기
+
+(퇴화된 미디어 종류 : aural, braille, embossed, handheld, projection, tty, tv)
+
+### 3) media feature(미디어 특징)
+
+```
+| width | min-width | max-width
+| height | min-height | max-height
+| device-width | min-device-width | max-device-width
+| device-height | min-device-height | max-device-height
+
+| aspect-ratio (min- / max- 접두어 사용가능)
+| device-aspect-ratio (min- / max- 접두어 사용가능)
+| color (min- / max- 접두어 사용가능)
+| monochrome (min- / max- 접두어 사용가능)
+| resolution (min- / max- 접두어 사용가능)
+| scan | grid
+
+```
+
+#### ① width 화면 영역 너비(브라우저 창 같은)
+* 모든 장치에서 최소너비 20em 이상이면 적용
+
+```
+@media (min-width: 20em){...}
+```
+
+* 스크린 장치 최소 화면이 500px보다 크고 800px보다 작을 때 스타일 적용
+
+```
+<link rel="stylesheet" media="screen and (min-width: 500px) and (max-width:800px)" href="example.css" />
+```
+
+#### ② height 화면 영역 높이
+#### ③ device-width 출력 장치의 너비(컴퓨터 스크린 같은)
+* 장치 너비가 450px보다 작을 때 적용
+
+```
+<link rel="stylesheet" media="screen and (max-device-width:450px)" />
+```
+
+#### ④ device-height 출력 장치의 높이
+#### ⑤ aspect-ratio 화면 영역의 가로 세로 비
+* 기호 **'/'** 을 사용하여, 앞에는 수평 픽셀 비율, 뒤에는 수직 픽셀 비율 (양수 and  정수)
+* 가로 화면 비가 1:1 이상일 때 적용. 즉, 화면이 직사각이거나 세로일 때만 적용
+
+```
+@media screen and (device-aspect-ratio: 1/1) {...}
+```
+
+#### ⑥ device-aspect-ration 출력 장치의 가로세로 비.(첫번째 값: 수평픽셀 비, 두번째 값: 수직 픽셀 비)
+* 장치 가로 세로 비가 16:9일 때 적용.
+
+```
+@media screen and (device-aspect-ratio: 16/9) {...}
+```
+
+#### ⑦ color 출력 장치의 색상 구성요소 당 비트 수(장치가 색깔 장치가 아니면 값은 0)
+* 모든 색상 장치에 적용
+
+```
+@media all and (color){...}
+```
+
+* 색상 구성요소당 최소 4비트를 지닌 장치에 적용
+
+```
+@media all and (min-color: 4){...}
+```
+
+#### ⑧ color-index 장치가 표시할 수 있는 색상 수
+#### ⑨ grid 출력 장치가 그리드 장치 또는 비트맵 장치냐에 따라 결정
+#### ⑩ monochrome 흑백(회색톤)장치에 색상 당 비트 수
+#### ⑪ orientation 화면이 가로 모드인지, 세로 모드인지 지정
+#### ⑫ resolution 출력 장치의 해상도
+#### ⑬ scan 텔레비전 출력 장치의 스캐닝 과정
