@@ -169,8 +169,45 @@ all | print | speech | screen
 ```
 
 #### ⑧ color-index 장치가 표시할 수 있는 색상 수
+* 최소 색상 256색상을 지닌 모든 장치에 적용
+
+```html
+<link rel="stylesheet" media="all and (min-color-index: 256)" href="example.css" />
+```
+
 #### ⑨ grid 출력 장치가 그리드 장치 또는 비트맵 장치냐에 따라 결정
+* 장치가 그리드 기반이면 값은 1. 그렇지 않으면 0
 #### ⑩ monochrome 흑백(회색톤)장치에 색상 당 비트 수
+* 장치가 흑백이 아니면 값은 0
+* 모든 흑백 장치에 적용
+
+```
+@media all and (monochrome){...}
+```
+
 #### ⑪ orientation 화면이 가로 모드인지, 세로 모드인지 지정
+* 오직 세로 방향에서만 적용
+
+```
+@media all and (orientation: portrait){...}
+```
+
 #### ⑫ resolution 출력 장치의 해상도
+* 해상도는 dpi(dots per inch)나, dpcm(dots per cinimeter)로 지정
+* 최소 300dpi 이상 해상도를 지닌 장치에 적용
+
+```
+@media screen and (min-resolution: 3000dpi){...}
+```
+
 #### ⑬ scan 텔레비전 출력 장치의 스캐닝 과정
+* 값은 progressive | interlace
+* tv값은 퇴화됨 -> 사용x
+
+------------
+* 참조 사이트
+https://aboooks.tistory.com/365
+https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+https://www.htmlgoodies.com/beyond/css/introduction-to-css-media-queries.html
+
