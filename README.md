@@ -241,7 +241,36 @@ Fluid Images : 유동적인
 * 한국어 : http://bootstrapk.com/css/
 
 <p align="center">
-<img src="./images/bootstrap.png" width="700" >	
+<img src="./images/bootstrap.png" width="800" >	
+</p>
+
+### 2) 유동적인 그리드
+* 고정형 단위를 백분율(%)로 바꾸는 법 : 구하려는 요소의 값을 가장 큰 요소의 값(브라우저 창 or wrapper)으로 나눈다.
+
+```
+wrapper 1040px / contents 780px / sidebar 200px / margin 60px
+```
+
+* **content**의 백분율? 1040px / **780px**
+* **margin**의 백분율? 1040px / **60px**
+
+```
+wrapper 100% / contents 75% / sidebar 19% / margin 5%
+```
+
+### 3) 유동적인 이미지
+* 화면크기에 따라 이미지도 조절이 되게 하려면 위와 같이 **백분율 값 이용가능**
+* **이미지 > 부모요소** 일 경우 부모 요소의 너비대로 이미지 표시됨
+
+### 4) 유동적인 이미지
+* **em & rem** : 현재 글꼴 크기에 상대값. 2em = 현재글꼴 크기의 2배
+* **rem** : root em의 약자. root 요소 = html(최상위) 요소
+* **%(백분율)** : 부모에 상대값. em과 비슷
+
+* 주의점 : 상대단위 em과 % 값은 부모로부터 물려받은 font-size값으로 계산 -> 중첩구조에는 글꼴 일관성 유지 x
+
+<p align="center">
+<img src="./images/em.png" width="700" >	
 </p>
 ------------
 ##### 참조 사이트
