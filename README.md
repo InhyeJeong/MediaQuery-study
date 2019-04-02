@@ -217,6 +217,12 @@ all | print | speech | screen
 <![endif]-->
 ```
 
+```html
+:
+<meta name="viewport" content="width=device-width, initial-scale=1">
+:
+```
+
 ------------
 ##### 참조 사이트
 * https://aboooks.tistory.com/365
