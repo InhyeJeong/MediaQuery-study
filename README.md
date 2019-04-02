@@ -29,7 +29,7 @@ ie9+, chrome 21+, firefox3.5+, safari4.0+, opera 9+
 ## 2. 미디어 쿼리 문법
 ### 1) 연산자
 ------------
-```
+```html
 and | not | only | ,
 ```
 * **and 연산자** : 여러 미디어 특징들을 하나로 결합
@@ -104,7 +104,7 @@ all | print | speech | screen
 
 ### 3) media feature(미디어 특징)
 ------------
-```
+```html
 | width | min-width | max-width
 | height | min-height | max-height
 | device-width | min-device-width | max-device-width
@@ -122,13 +122,13 @@ all | print | speech | screen
 #### ① width 화면 영역 너비(브라우저 창 같은)
 * 모든 장치에서 최소너비 20em 이상이면 적용
 
-```
+```html
 @media (min-width: 20em){...}
 ```
 
 * 스크린 장치 최소 화면이 500px보다 크고 800px보다 작을 때 스타일 적용
 
-```
+```html
 <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width:800px)" href="example.css" />
 ```
 
@@ -136,7 +136,7 @@ all | print | speech | screen
 #### ③ device-width 출력 장치의 너비(컴퓨터 스크린 같은)
 * 장치 너비가 450px보다 작을 때 적용
 
-```
+```html
 <link rel="stylesheet" media="screen and (max-device-width:450px)" />
 ```
 
@@ -145,27 +145,27 @@ all | print | speech | screen
 * 기호 **'/'** 을 사용하여, 앞에는 수평 픽셀 비율, 뒤에는 수직 픽셀 비율 (양수 and  정수)
 * 가로 화면 비가 1:1 이상일 때 적용. 즉, 화면이 직사각이거나 세로일 때만 적용
 
-```
+```html
 @media screen and (device-aspect-ratio: 1/1) {...}
 ```
 
 #### ⑥ device-aspect-ration 출력 장치의 가로세로 비.(첫번째 값: 수평픽셀 비, 두번째 값: 수직 픽셀 비)
 * 장치 가로 세로 비가 16:9일 때 적용.
 
-```
+```html
 @media screen and (device-aspect-ratio: 16/9) {...}
 ```
 
 #### ⑦ color 출력 장치의 색상 구성요소 당 비트 수(장치가 색깔 장치가 아니면 값은 0)
 * 모든 색상 장치에 적용
 
-```
+```html
 @media all and (color){...}
 ```
 
 * 색상 구성요소당 최소 4비트를 지닌 장치에 적용
 
-```
+```html
 @media all and (min-color: 4){...}
 ```
 
@@ -182,14 +182,14 @@ all | print | speech | screen
 * 장치가 흑백이 아니면 값은 0
 * 모든 흑백 장치에 적용
 
-```
+```html
 @media all and (monochrome){...}
 ```
 
 #### ⑪ orientation 화면이 가로 모드인지, 세로 모드인지 지정
 * 오직 세로 방향에서만 적용
 
-```
+```html
 @media all and (orientation: portrait){...}
 ```
 
@@ -197,7 +197,7 @@ all | print | speech | screen
 * 해상도는 dpi(dots per inch)나, dpcm(dots per cinimeter)로 지정
 * 최소 300dpi 이상 해상도를 지닌 장치에 적용
 
-```
+```html
 @media screen and (min-resolution: 3000dpi){...}
 ```
 
