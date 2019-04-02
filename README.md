@@ -229,4 +229,4 @@ all | print | speech | screen
 * https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries
 * https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
 * https://www.htmlgoodies.com/beyond/css/introduction-to-css-media-queries.html
-
+* 생활코딩 유튜브 주소 : https://opentutorials.org/course/2418/13517
