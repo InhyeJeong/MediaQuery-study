@@ -205,9 +205,9 @@ all | print | speech | screen
 * tv값은 퇴화됨 -> 사용x
 
 ------------
-* 참조 사이트
-https://aboooks.tistory.com/365
-https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries
-https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
-https://www.htmlgoodies.com/beyond/css/introduction-to-css-media-queries.html
+##### 참조 사이트
+* https://aboooks.tistory.com/365
+* https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries
+* https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+* https://www.htmlgoodies.com/beyond/css/introduction-to-css-media-queries.html
 
