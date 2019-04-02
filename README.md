@@ -229,6 +229,20 @@ all | print | speech | screen
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 ```
 
+## 4. 유동적 그리드, 이미지, 크기 조절이 가능한 글꼴
+
+```
+Fluid Grids : 유동적인 그리드
+Fluid Images : 유동적인 
+```
+### 1) 그리드란?
+* 웹페이지를 수직 수평선으로 분할하는 레이아웃 요소
+* https://getbootstrap.com/docs/4.0/layout/grid/
+* 한국어 : http://bootstrapk.com/css/
+
+<p align="center">
+<img src="./images/bootstrap.png" width="700" >	
+</p>
 ------------
 ##### 참조 사이트
 * https://aboooks.tistory.com/365
