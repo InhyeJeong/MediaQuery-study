@@ -205,6 +205,16 @@ all | print | speech | screen
 * 값은 progressive | interlace
 * tv값은 퇴화됨 -> 사용x
 
+## 3. IE6~8에서 미디어 퀴리를 적용하려면?
+* 구글에서 제공하는 자바스크립트 라이브러리 사용하면 IE6~8 미디어쿼리 작동함.
+* **조건부 주석**을 통해 스크립트를 감싸며, IE9 이하에서만 스크립트가 로드되며, **다른 브라우저는 이 구문을 무시**함.
+* **주의** : </body> 바로 위에 위치할 것. @import로 된 스타일시트에서는 작동하지 않음.
+```html
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!-- [if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+```
 ------------
 ##### 참조 사이트
 * https://aboooks.tistory.com/365
