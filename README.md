@@ -28,6 +28,7 @@ ie9+, chrome 21+, firefox3.5+, safari4.0+, opera 9+
 
 ## 2. 미디어 쿼리 문법
 ### 1) 연산자
+------------
 ```
 and | not | only | ,
 ```
@@ -90,7 +91,7 @@ and | not | only | ,
 ```
 
 ### 2) media type(미디어 종류)
-
+------------
 ```html
 all | print | speech | screen
 ```
@@ -102,7 +103,7 @@ all | print | speech | screen
 (퇴화된 미디어 종류 : aural, braille, embossed, handheld, projection, tty, tv)
 
 ### 3) media feature(미디어 특징)
-
+------------
 ```
 | width | min-width | max-width
 | height | min-height | max-height
