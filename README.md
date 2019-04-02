@@ -223,6 +223,12 @@ all | print | speech | screen
 :
 ```
 
+* edge mode, IE 버전 중 가장 최신 모드로 표시
+
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+```
+
 ------------
 ##### 참조 사이트
 * https://aboooks.tistory.com/365
