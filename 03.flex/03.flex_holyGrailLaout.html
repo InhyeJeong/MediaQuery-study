@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Responsive Web</title>
+    <style>
+        .container {
+            /* 부모가 flex 잡혀있어야함 */
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            border-bottom: 1px solid gray;
+            padding-left: 20px
+        }
+        footer {
+            border-top: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            /* 한 줄로 정렬됨, 부모가 flex 잡혀있어야함 */
+            display: flex;
+        }
+        .content nav {
+            border-right: 1px solid gray
+        }
+        .content aside {
+            border-left: 1px solid gray
+        }
+        nav, aside {
+            /* 좌우 고정 */
+            flex-basis: 150px;
+            /* 기본 shrink값은 1, 좌우는 0값을 지정하므로 고정됨 */
+            flex-shrink: 0
+        }
+
+        main {
+            padding:10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Holy Grail Layout 타이틀입니다.</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>JavaScript</li>
+                </ul>
+            </nav>
+            <main>
+                메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.메인입니다.
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a href="https://www.meditlink.com">meditlink 홈페이지</a> 
+        </footer>
+    </div>
+</body>
+
+</html>
