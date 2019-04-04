@@ -275,10 +275,41 @@ wrapper 100% / contents 75% / sidebar 19% / margin 5%
 <img src="./images/em.png" width="700" >	
 </p>
 
+## 5. css 단위
+### 1) vh / vw
+* vh 요소는 높이값의 100분의 1의 단위입니다.
+* 예를 들어 브라우저 높이값이 900px일때 1vh는 9px이라는 뜻이 되지요. 그와 유사하게 뷰포트의 너비값이 750px이면 1vw는 7.5px이 됩니다.
+* 스크린의 너비값에 꽉 차는 헤드라인
+
+```
+.slide {
+    height: 100vh;
+}
+```
+
+### 2) vmin / vmax
+* vh와 vw이 늘 뷰포트의 너비값과 높이값에 상대적인 영향을 받는다면 vmin과 vmax는 너비값과 높이값에따라 최대, 최소값을 지정할 수 있습니다.
+* 예를 들면 브라우저의 크기가 1100px 너비, 그리고 700px 높이일때 1vmin은 7px이 되고 1vmax는 11px이 됩니다.
+* 너비값이 다시 800px이 되고 높이값이 1080px이 되면 vmin은 8px이 되고 vmax는 10.8px이 됩니다.
+* 터치화면 양 변에 가득차는 정사각형 요소를 만들때
+
+```javascript
+.box {
+    height: 100vmin;
+    width: 100vmin;
+}
+```
+
+<p align="center">
+<img src="./images/vmin.png" width="700" >	
+</p>
+
+
 ------------
-##### 참조 사이트
+**출처**
 * https://aboooks.tistory.com/365
 * https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries
 * https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
 * https://www.htmlgoodies.com/beyond/css/introduction-to-css-media-queries.html
 * 생활코딩 유튜브 주소 : https://opentutorials.org/course/2418/13517
+* css 단위 : https://webdesign.tutsplus.com/ko/articles/7-css-units-you-might-not-know-about--cms-22573
