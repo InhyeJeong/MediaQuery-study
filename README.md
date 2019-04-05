@@ -7,14 +7,14 @@ ie9+, chrome 21+, firefox3.5+, safari4.0+, opera 9+
 ```
 
 ## 1. 미디어 쿼리 사용법
-* css 내부 삽입
+* 링크 연결
 
 ```html
 <!-- link요소에 있어서의 CSS 미디어 쿼리 -->
 <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
 ```
 
-* 링크 연결
+* css 내부 삽입
 ```html
 <!-- 스타일 이벤트 내의 CSS 미디어 쿼리 -->
 <style>
@@ -208,7 +208,7 @@ all | print | speech | screen
 ## 3. IE6~8에서 미디어 퀴리를 적용하려면?
 * 구글에서 제공하는 자바스크립트 라이브러리 사용하면 IE6~8 미디어쿼리 작동함.
 * **조건부 주석**을 통해 스크립트를 감싸며, IE9 이하에서만 스크립트가 로드되며, **다른 브라우저는 이 구문을 무시**함.
-* **주의** : </body> 바로 위에 위치할 것. @import로 된 스타일시트에서는 작동하지 않음.
+* **주의** : **</body>** 바로 위에 위치할 것. @import로 된 스타일시트에서는 작동하지 않음.
 
 ```html
 <!-- css3-mediaqueries.js for IE less than 9 -->
