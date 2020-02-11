@@ -315,3 +315,26 @@ wrapper 100% / contents 75% / sidebar 19% / margin 5%
 * https://www.htmlgoodies.com/beyond/css/introduction-to-css-media-queries.html
 * 생활코딩 유튜브 주소 : https://opentutorials.org/course/2418/13517
 * css 단위 : https://webdesign.tutsplus.com/ko/articles/7-css-units-you-might-not-know-about--cms-22573
+
+
+## 6. Resolution
+
+### 1) resolution
+> 해상도란 화면의 픽셀 수를 의미하는 것으로, 해상도가 1024 * 768인 경우 한 화면에 가로 1024개의 점과 세로 768개의 점이 모여 화면을 구성하고 있는 것이다.
+
+<p align="center">
+  <img src="./images/compareResolution.png" width="400" >	
+</p>
+
+### 2) inch
+* 스마트폰 인치란, 물리적 스크린 크기의 대각선의 길이
+> 스마트폰 해상도에서 dpi는 물리적 스크린 영역 내의 화소의 밀도(density)를 표현한다. 쉽게 말하면, 같은 화면 크기에 얼마나 많은 색을 채워 넣을 수 있는 정도이다.
+
+### 3) dpi
+* dot per inch
+* 출력물, 인쇄물상에서의 해상도
+
+### 4) ppi
+* pixel per inch : 1인치 안에 몇 개의 픽셀이 들어 있는지
+* ppi는 디스플레이상에서의 해상도를 나타낸다.
+
